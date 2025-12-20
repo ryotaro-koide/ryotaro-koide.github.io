@@ -1,0 +1,5 @@
+.underlineDotted {
+    border-bottom-color: #443088;
+    border-bottom-style: dotted;
+    border-bottom-width: 6px;
+}
