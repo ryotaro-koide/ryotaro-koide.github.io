@@ -16,8 +16,8 @@
         <meta name="twitter: title" content="LaTeXでフォントサイズを10.5ptにできない問題">
         <meta name="twitter:description" content="LuaLaTeXでフォントサイズを10.5ptに指定する方法">
         
-        <!-- CSS -->
-        <link rel="stylesheet" href="../../../../style.css">
+        <link rel="stylesheet" href="/style.css">
+        <script src="/js/script.js" defer></script>
         
     </head>
     <body>
@@ -50,6 +50,9 @@
                     <meta itemprop="position" content="3" />
                 </li> -->
             </ol>
+            <!-- <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <span class="theme-toggle-icon">🌙</span>
+            </button> -->
         </nav>
     </header>
         <main>
@@ -108,23 +111,12 @@
                 </footer>
             </article>
         </main>
-        <p><a href="../../../">トップページへ</a></p>
+        <p><a href="/">トップページへ</a></p>
         <footer>
             <p class="language-switch">
                     🌐 <a href="../../../">English</a>
             </p>
-            <p>&copy; <span id="copyright-year"></span> rkoide</p>
+            <p>&copy; <span id="copyright-year"></span> rkoide.dev</p>
         </footer>
-        <!-- Automatic copyright year -->
-        <script>
-            const startYear = 2025;
-            const currentYear = new Date().getFullYear();
-            
-            const yearText = startYear === currentYear 
-                ? startYear 
-                : `${startYear}-${currentYear}`;
-            
-            document.getElementById('copyright-year').textContent = yearText;
-        </script>
     </body>
 </html>
