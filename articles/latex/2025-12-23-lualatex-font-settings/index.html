@@ -2,6 +2,7 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>LaTeXでフォントサイズを10.5ptにできない問題 - rkoide.dev</title>
         
         <!-- OGP(for SNS) -->
@@ -20,18 +21,18 @@
         
     </head>
     <body>
-    <header>
+    <header class="site-header">
         <nav aria-label="ナビゲーション">
             <ol itemscope itemtype="https://schema.org/BreadcrumbList" style="list-style: none; padding: 0; display: flex; gap: 0.5em;">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="../../../index.html">
+                    <a itemprop="item" href="../../../">
                         <span itemprop="name">rkoide.dev blog</span>
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
                 <li aria-hidden="true">&gt;</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="../../index.html">
+                    <a itemprop="item" href="../../">
                         <span itemprop="name">Articles</span>
                     </a>
                     <meta itemprop="position" content="2" />
@@ -107,10 +108,21 @@
                 </footer>
             </article>
         </main>
-        <p><a href="../../../index.html">Back to Home</a></p>
+        <p><a href="../../../">Back to Home</a></p>
 
         <footer>
-            <p>© 2025 rkoide</p>
+            <p>&copy; <span id="copyright-year"></span> rkoide</p>
         </footer>
+        <!-- Automatic copyright year -->
+        <script>
+            const startYear = 2025;
+            const currentYear = new Date().getFullYear();
+            
+            const yearText = startYear === currentYear 
+                ? startYear 
+                : `${startYear}-${currentYear}`;
+            
+            document.getElementById('copyright-year').textContent = yearText;
+        </script>
     </body>
 </html>

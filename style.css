@@ -1,5 +1,80 @@
+/* ===== Basic setting ===== */
+* {
+  box-sizing: border-box;  /* include padding and border in the element's total width and height */
+}
+
+:root {
+  --sys-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --ja-font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
+}
+
+body {
+    font-family: "Lato", 
+                /* For modern browsers and Android */
+                system-ui, Roboto, "Helvetica Neue",
+                /* for ↓Windows/Mac */
+                "游ゴシック体", "Yu Gothic", YuGothic, 
+                "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", 
+                "メイリオ", "Meiryo", 
+                sans-serif;
+    margin: 0;
+    padding: 1rem 1.5rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ===== Header (Sticky) ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 100;
+  padding: 1rem 0;
+  margin: -1rem -1.5rem 1rem -1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* ===== Main Content ===== */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+/* ===== Footer ===== */
+body > footer {
+  max-width: 800px;
+  margin: 2rem auto 0;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+  color: #666;
+}
+article > footer {
+  text-align: right;
+  color: #666;
+  margin-top: 3rem;
+  border-top: 1px solid #f0f0f0;
+  font-size: 0.9rem;
+}
+
+/* ===== Components ===== */
 .underlineDotted {
     border-bottom-color: #443088;
     border-bottom-style: dotted;
     border-bottom-width: 6px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  body {
+    padding: 0.75rem 1rem;
+  }
+  
+  .site-header {
+    margin: -0.75rem -1rem 1rem -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }

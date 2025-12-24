@@ -1,29 +1,46 @@
 <!DOCTYPE html>
+<html lang="en">
     <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About</title>
         <style>
             @import url(style.css);
         </style>
     </head>
     <body>
-        <h1 class="underlineDotted">about</h1>
-        <ul>
-            <li>Name: Ryotaro Koide</li>
-            <!-- <li>birthdate: 20XX/03/XX</li> -->
-            <li>Hobby: Travel, Programming</li>
-            <li>Favorite food: Ramen, Sushi, Whopper burger etc.</li>
-            <li>Major: Mechanical Engineering
-                <ul>
-                    <li>University: School of Science and Technology ,Meiji University <br>(Kawasaki, Kanagawa)</li>
-                    <li>Laboratory: Structural Dynamics Laboratory</li>
-                </ul>
-            </li>
-            <li>Working on: Vibration analysis of railway carbody using finite element method</li>
-            <li>Skills: CAD(ANSYS, CAD SUPER, PTC Creo), Programming, English(TOEIC Score 800+), LaTeX</li>
-            <li>Programming language: C, MATLAB, Python</li>
-            <li>Goal: To be a good railway engineer who contributes to the development of local society</li>
-        </ul>
+        <header class="site-header">
+            <nav aria-label="ナビゲーション">
+                <ol itemscope itemtype="https://schema.org/BreadcrumbList" style="list-style: none; padding: 0; display: flex; gap: 0.5em;">
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="../">
+                            <span itemprop="name">rkoide.dev</span>
+                        </a>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                </ol>
+            </nav>
+        </header>
+        <main>
+            <h1 class="underlineDotted">about</h1>
+            <ul>
+                <li>Name: Ryotaro Koide</li>
+                <!-- <li>birthdate: 20XX/03/XX</li> -->
+                <li>Hobby: Travel, Programming</li>
+                <li>Favorite food: Ramen, Sushi, Whopper burger etc.</li>
+                <li>Major: Mechanical Engineering
+                    <ul>
+                        <li>University: School of Science and Technology ,Meiji University <br>(Kawasaki, Kanagawa)</li>
+                        <li>Laboratory: Structural Dynamics Laboratory</li>
+                    </ul>
+                </li>
+                <li>Working on: Vibration analysis of railway carbody using finite element method</li>
+                <li>Skills: CAD(ANSYS, CAD SUPER, PTC Creo), Programming, English(TOEIC Score 800+), LaTeX</li>
+                <li>Programming language: C, MATLAB, Python</li>
+                <li>Goal: To be a good railway engineer who contributes to the development of local society</li>
+            </ul>
+        </main>
     </body>
 
     <p><a href="index.html">Back to Home</a></p>
