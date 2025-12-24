@@ -6,12 +6,16 @@
         <title>rkoide.dev</title>
         <!-- Do not use @ when importing CSS -->
         <link rel="stylesheet" href="style.css">
+        <script src="/js/script.js" defer></script>
     </head>
     <body>
         <header class="site-header">
             <nav aria-label="ナビゲーション">
                 <a href="./">rkoide.dev</a>
             </nav>
+            <button id="theme-toggle" class="theme-toggle" aria-label="ダークモード切り替え">
+                <span class="theme-toggle-icon"></span> <!-- 空欄で良いはず -->
+            </button>
         </header>
 
         <main>
@@ -30,18 +34,7 @@
             <p class="language-switch">
                     🌐 <a href="/ja/">日本語</a>
             </p>
-            <p>&copy; <span id="copyright-year"></span> rkoide</p>
+            <p>&copy; <span id="copyright-year"></span> rkoide.dev</p>
         </footer>
-        <!-- Automatic copyright year -->
-        <script>
-            const startYear = 2025;
-            const currentYear = new Date().getFullYear();
-            
-            const yearText = startYear === currentYear 
-                ? startYear 
-                : `${startYear}-${currentYear}`;
-            
-            document.getElementById('copyright-year').textContent = yearText;
-        </script>
     </body>
 </html>

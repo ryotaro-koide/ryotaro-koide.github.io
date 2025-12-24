@@ -6,10 +6,11 @@
         <title>Articles - rkoide</title>
         <!-- Do not use @ when importing CSS -->
         <link rel="stylesheet" href="../../style.css">
+        <script src="/js/script.js" defer></script>
     </head>
     <body>
         <header class="site-header">
-        <nav aria-label="ナビゲーション">
+            <nav aria-label="ナビゲーション">
             <!-- <ol itemscope itemtype="https://schema.org/BreadcrumbList" style="list-style: none; padding: 0; display: flex; gap: 0.5em;">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"> -->
                     <a itemprop="item" href="../index.html">
@@ -30,7 +31,10 @@
                     <meta itemprop="position" content="3" />
                 </li>
             </ol> -->
-        </nav>
+            </nav>
+            <button id="theme-toggle" class="theme-toggle" aria-label="ダークモード切り替え">
+                <span class="theme-toggle-icon"></span> <!-- 空欄で良いはず -->
+            </button>
         </header>
         <main>
             <h1 class="underlineDotted">Articles</h1>
@@ -48,7 +52,7 @@
             <p class="language-switch">
                     🌐 <a href="../../">English</a>
             </p>
-            <p>&copy;  2025 rkoide</p>
+            <p>&copy;  2025 rkoide.dev</p>
         </footer>
     </body>
 </html>
