@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-    <html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>rkoide</title>
         <style>
@@ -11,13 +12,25 @@
         <h1 class="underlineDotted">rkoide</h1>
         <ul>
             <li><p><a href="about.html">About</a></p></li>
-            <li><p><a href="articles/index.html">Articles</a></p></li>
+            <li><p><a href="articles/">Articles</a></p></li>
+            <li><p><a href="links/">Links</a></p></li>
         </ul>
 
         <p>Coming Soon</p>
 
         <footer>
-            <p>© 2025 rkoide</p>
+            <p>&copy; <span id="copyright-year"></span> rkoide</p>
         </footer>
+        <!-- Automatic copyright year -->
+        <script>
+            const startYear = 2025;
+            const currentYear = new Date().getFullYear();
+            
+            const yearText = startYear === currentYear 
+                ? startYear 
+                : `${startYear}-${currentYear}`;
+            
+            document.getElementById('copyright-year').textContent = yearText;
+        </script>
     </body>
 </html>
