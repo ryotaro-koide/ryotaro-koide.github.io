@@ -6,34 +6,86 @@
 :root {
   --sys-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   --ja-font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
+  /* Light mode (Default) */
+  --bg-color: #fff;
+  --text-color:  #333;
+  --primary-color: #443088;
+  --primary-hover: #5a40a8;
+  --border-color: #e0e0e0;
+  --border-light: #f0f0f0;
+  --link-color: #443088;
+  --link-hover: #5a40a8;
+  --footer-text: #666;
+  --header-bg: #fff;
+  --header-shadow: rgba(0, 0, 0, 0.05);
+  --button-shadow: rgba(68, 48, 136, 0.2);
+  --button-shadow-hover: rgba(68, 48, 136, 0.3);
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --primary-color: #8b7bc8;
+  --primary-hover:  #a599d9;
+  --border-color:  #333;
+  --border-light: #2a2a2a;
+  --link-color: #8b7bc8;
+  --link-hover: #a599d9;
+  --footer-text: #999;
+  --header-bg: #1a1a1a;
+  --header-shadow: rgba(255, 255, 255, 0.05);
+  --button-shadow:  rgba(139, 123, 200, 0.3);
+  --button-shadow-hover: rgba(139, 123, 200, 0.5);
+}
+
+/* Automatic Color Mode */
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme]) {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --primary-color: #8b7bc8;
+    --primary-hover: #a599d9;
+    --border-color: #333;
+    --border-light:  #2a2a2a;
+    --link-color: #8b7bc8;
+    --link-hover: #a599d9;
+    --footer-text: #999;
+    --header-bg: #1a1a1a;
+    --header-shadow: rgba(255, 255, 255, 0.05);
+    --button-shadow: rgba(139, 123, 200, 0.3);
+    --button-shadow-hover: rgba(139, 123, 200, 0.5);
+  }
 }
 
 body {
-    font-family: "Lato", 
-                /* For modern browsers and Android */
-                system-ui, Roboto, "Helvetica Neue",
-                /* for ↓Windows/Mac */
-                "游ゴシック体", "Yu Gothic", YuGothic, 
-                "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", 
-                "メイリオ", "Meiryo", 
-                sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Lato", 
+              /* For modern browsers and Android */
+              system-ui, Roboto, "Helvetica Neue",
+              /* for ↓Windows/Mac */
+              "游ゴシック体", "Yu Gothic", YuGothic, 
+              "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", 
+              "メイリオ", "Meiryo", 
+              sans-serif;
     margin: 0;
     padding: 1rem 1.5rem;
     line-height: 1.6;
-    color: #333;
 }
 
 /* ===== Header (Sticky) ===== */
 .site-header {
   position: sticky;
   top: 0;
-  background-color: #fff;
+  background-color: var(--header-bg);
   z-index: 100;
   padding: 1rem 0;
   margin: -1rem -1.5rem 1rem -1.5rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 2px 4px var(--header-shadow);
 }
 
 /* ===== Main Content ===== */
@@ -42,26 +94,101 @@ main {
   margin: 0 auto;
   padding: 1rem 0;
 }
+
+main h2 {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+main a {
+  color: var(--link-color);
+}
+
+main a:hover {
+  color: var(--link-hover);
+}
+
 /* ===== Footer ===== */
 body > footer {
   max-width: 800px;
   margin: 2rem auto 0;
   padding-top: 2rem;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid var(--border-color);
   text-align: center;
-  color: #666;
+  color: var(--footer-text);
 }
+
+/* Button */
+.button {
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 6px var(--button-shadow);
+}
+.button:hover {
+  background-color: var(--primary-hover);
+  box-shadow: 0 6px 12px var(--button-shadow-hover);
+}
+
+/* ===== Theme Toggle Button ===== */
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.theme-toggle {
+    background:  none;
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    border-color: var(--primary-color);
+    transform: rotate(20deg);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
+.theme-toggle-icon {
+    transition: transform 0.3s ease;
+}
+
+/* Dark mode Button icon */
+[data-theme="dark"] .theme-toggle-icon::before {
+    content: "☀️";
+}
+
+[data-theme="light"] .theme-toggle-icon::before {
+    content: "🌙";
+}
+
+/* Default */
+.theme-toggle-icon::before {
+    content: "🌙";
+}
+
 article > footer {
   text-align: right;
-  color: #666;
+  color: var(--footer-text);
   margin-top: 3rem;
-  border-top: 1px solid #f0f0f0;
+  border-top: 1px solid var(--border-light);
   font-size: 0.9rem;
 }
 
 /* ===== Components ===== */
 .underlineDotted {
-    border-bottom-color: #443088;
+    border-bottom-color: var(--primary-color);
     border-bottom-style: dotted;
     border-bottom-width: 6px;
 }
