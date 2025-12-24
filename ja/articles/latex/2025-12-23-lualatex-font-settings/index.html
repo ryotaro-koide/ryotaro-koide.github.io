@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LaTeXでフォントサイズを10.5ptにできない問題 - rkoide.dev</title>
+        
+        <!-- OGP(for SNS) -->
+        <meta property="og:title" content="LaTeXでフォントサイズを10.5ptにできない問題">
+        <meta property="og:description" content="LuaLaTeXでフォントサイズを10.5ptに指定する方法">
+        <meta property="og: type" content="article">
+        <meta property="og:url" content="https://rkoide.dev/articles/latex/2025-12-23-font-size-issue/">
+        
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter: title" content="LaTeXでフォントサイズを10.5ptにできない問題">
+        <meta name="twitter:description" content="LuaLaTeXでフォントサイズを10.5ptに指定する方法">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../style.css">
+        
+    </head>
+    <body>
+    <header class="site-header">
+        <nav aria-label="ナビゲーション">
+            <ol itemscope itemtype="https://schema.org/BreadcrumbList" style="list-style: none; padding: 0; display: flex; gap: 0.5em;">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="../../../">
+                        <span itemprop="name">rkoide.dev blog</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </li>
+                <li aria-hidden="true">&gt;</li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="../../">
+                        <span itemprop="name">Articles</span>
+                    </a>
+                    <meta itemprop="position" content="2" />
+                </li>
+                <!-- <li aria-hidden="true">&gt;</li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="../../latex/">
+                        <span itemprop="name">LaTeX</span>
+                    </a>
+                    <meta itemprop="position" content="2" />
+                </li>
+                <li aria-hidden="true">&gt;</li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">本記事</span>
+                    <meta itemprop="position" content="3" />
+                </li> -->
+            </ol>
+        </nav>
+    </header>
+        <main>
+            <article>
+                <header>
+                    <h1 class="underlineDotted">LaTeXでフォントサイズを10.5ptにできない問題</h1>
+                    <time datetime="2025-12-23">2025年12月23日</time>
+                    <p>カテゴリ: LaTeX</p>
+                </header>
+
+                <section>
+                    <h2>環境</h2>
+                    <ul>
+                        <li>TeX エンジン: LuaLaTeX</li>
+                        <li>ドキュメントクラス: ltjsreport</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>困ったこと</h2>
+                    <p>LaTeXで卒論を書いている際，documentclassで，
+                        <code>\documentclass[10.5pt,a4j,openany]{ltjsreport}</code>
+                        とフォントサイズを指定したが，10.5 ptにならなかった．
+<!-- 
+                        そのため，1行当たりの文字数がWordよりも多くなってしまう． -->
+                    </p>
+                </section>
+
+                <section>
+                    <h2>対処</h2>
+                    <p>anyfontsize パッケージを導入して解決した．
+                        具体的には，
+                        <script src="https://gist.github.com/ryotaro-koide/2f43a6f953fec06dd77069708805b091.js"></script>
+                        のように記述した．
+                    </p>
+                </section>
+                
+                <section>
+                    <h2>結果</h2>
+                    <p>LuaLaTeXにおいてフォントサイズを任意の値に指定できた．</p>
+                </section>
+
+                <section>
+                    <h2>備考</h2>
+                    <p>目次のフォントサイズまで小さくなったので，
+                        ここはまた別の指定が必要かもしれない．
+                    </p>
+                </section>
+
+                <footer>
+                    <p>投稿日: <time datetime="2025-12-23">2025-12-23</time></p>
+                    <!-- <p>タグ: 
+                        <a href="/tags/lualatex">LuaLaTeX</a>, 
+                        <a href="/tags/font">フォント</a>
+                    </p> -->
+                </footer>
+            </article>
+        </main>
+        <p><a href="../../../">トップページへ</a></p>
+        <footer>
+            <p class="language-switch">
+                    🌐 <a href="../../../ja/">日本語</a>
+            </p>
+            <p>&copy; <span id="copyright-year"></span> rkoide</p>
+        </footer>
+        <!-- Automatic copyright year -->
+        <script>
+            const startYear = 2025;
+            const currentYear = new Date().getFullYear();
+            
+            const yearText = startYear === currentYear 
+                ? startYear 
+                : `${startYear}-${currentYear}`;
+            
+            document.getElementById('copyright-year').textContent = yearText;
+        </script>
+    </body>
+</html>
