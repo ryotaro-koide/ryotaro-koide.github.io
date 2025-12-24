@@ -6,13 +6,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>rkoide.dev</title>
         <!-- Do not use @ when importing CSS -->
-        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="/style.css">
+        <script src="/js/script.js" defer></script>
     </head>
     <body>
         <header class="site-header">
             <nav aria-label="ナビゲーション">
-                <a href="/ja/">rkoide.dev</a>
+                <ol itemscope itemtype="https://schema.org/BreadcrumbList" style="list-style: none; padding: 0; display: flex; gap: 0.5em;">
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="/ja/">
+                            <span itemprop="name">rkoide.dev</span>
+                        </a>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                </ol>
             </nav>
+            <button id="theme-toggle" class="theme-toggle" aria-label="ダークモード切り替え">
+                <span class="theme-toggle-icon"></span> <!-- 空欄で良いはず -->
+            </button>
         </header>
 
         <main>
@@ -30,18 +41,7 @@
             <p class="language-switch">
                 🌐 <a href="/">English</a>
             </p>
-            <p>&copy; <span id="copyright-year"></span> rkoide</p>
+            <p>&copy; <span id="copyright-year"></span> rkoide.dev</p>
         </footer>
-        <!-- Automatic copyright year -->
-        <script>
-            const startYear = 2025;
-            const currentYear = new Date().getFullYear();
-            
-            const yearText = startYear === currentYear 
-                ? startYear 
-                : `${startYear}-${currentYear}`;
-            
-            document.getElementById('copyright-year').textContent = yearText;
-        </script>
     </body>
 </html>

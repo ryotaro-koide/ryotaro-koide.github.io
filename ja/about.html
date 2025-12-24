@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About</title>
         <!-- Do not use @ when importing CSS -->
-        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="/style.css">
+        <script src="/js/script.js" defer></script>
     </head>
     <body>
         <header class="site-header">
@@ -19,6 +20,9 @@
                     </li>
                 </ol>
             </nav>
+            <button id="theme-toggle" class="theme-toggle" aria-label="ダークモード切り替え">
+                <span class="theme-toggle-icon"></span> <!-- 空欄で良いはず -->
+            </button>
         </header>
         <main>
             <h1 class="underlineDotted">About</h1>
@@ -65,13 +69,13 @@
             </section>
         </main>
 
-        <p><a href=".">トップページへ</a></p>
+        <p><a href="/ja/">トップページへ</a></p>
 
         <footer>
             <p class="language-switch">
                 🌐 <a href="/">English</a>
             </p>
-            <p>© 2025 rkoide</p>
+            <p>&copy; 2025 rkoide.dev</p>
         </footer>
     </body>
 </html>

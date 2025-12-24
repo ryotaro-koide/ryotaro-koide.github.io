@@ -16,8 +16,8 @@
         <meta name="twitter: title" content="LaTeXでフォントサイズを10.5ptにできない問題">
         <meta name="twitter:description" content="LuaLaTeXでフォントサイズを10.5ptに指定する方法">
         
-        <!-- CSS -->
-        <link rel="stylesheet" href="../../../../style.css">
+        <link rel="stylesheet" href="/style.css">
+        <script src="/js/script.js" defer></script>
         
     </head>
     <body>
@@ -51,6 +51,9 @@
                 </li> -->
             </ol>
         </nav>
+        <button id="theme-toggle" class="theme-toggle" aria-label="ダークモード切り替え">
+            <span class="theme-toggle-icon"></span> <!-- 空欄で良いはず -->
+        </button>
     </header>
         <main>
             <article>
@@ -107,24 +110,30 @@
                     </p> -->
                 </footer>
             </article>
+
+            <!-- Share button outside of article -->
+            <aside class="article-share" aria-label="この記事をシェア">
+                <h2>この記事をシェア</h2>
+                <!-- AddToAny BEGIN -->
+                <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                    <a class="a2a_button_x"></a>
+                    <a class="a2a_button_bluesky"></a>
+                    <a class="a2a_button_hatena"></a>
+                    <a class="a2a_button_line"></a>
+                    <a class="a2a_button_email"></a>
+                    <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                </div>
+                <script defer src="https://static.addtoany.com/menu/page.js"></script>
+                <!-- AddToAny END -->
+            </aside>
+
         </main>
-        <p><a href="../../../">トップページへ</a></p>
+        <p><a href="/">トップページへ</a></p>
         <footer>
             <p class="language-switch">
-                    🌐 <a href="../../../">English</a>
+                    🌐 <a href="/">English</a>
             </p>
-            <p>&copy; <span id="copyright-year"></span> rkoide</p>
+            <p>&copy; <span id="copyright-year"></span> rkoide.dev</p>
         </footer>
-        <!-- Automatic copyright year -->
-        <script>
-            const startYear = 2025;
-            const currentYear = new Date().getFullYear();
-            
-            const yearText = startYear === currentYear 
-                ? startYear 
-                : `${startYear}-${currentYear}`;
-            
-            document.getElementById('copyright-year').textContent = yearText;
-        </script>
     </body>
 </html>

@@ -17,7 +17,8 @@
         <meta name="twitter:description" content="Links page of rkoide.dev">
         
         <!-- CSS -->
-        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="/style.css">
+        <script src="/js/script.js" defer></script>
         
     </head>
     <body>
@@ -25,13 +26,16 @@
             <nav aria-label="ナビゲーション">
                 <ol itemscope itemtype="https://schema.org/BreadcrumbList" style="list-style: none; padding: 0; display: flex; gap: 0.5em;">
                     <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <a itemprop="item" href="../index.html">
+                        <a itemprop="item" href="/">
                             <span itemprop="name">rkoide.dev</span>
                         </a>
                         <meta itemprop="position" content="1" />
                     </li>
                 </ol>
             </nav>
+            <button id="theme-toggle" class="theme-toggle" aria-label="ダークモード切り替え">
+                <span class="theme-toggle-icon"></span> <!-- 空欄で良いはず -->
+            </button>
         </header>
         <main>
             <h1 class="underlineDotted">Links</h1>
@@ -59,9 +63,9 @@
 
         <footer>
             <p class="language-switch">
-                    🌐 <a href="../ja/">日本語</a>
+                    🌐 <a href="/ja/links/">日本語</a>
             </p>
-            <p>&copy;  2025 rkoide</p>
+            <p>&copy; <span id="copyright-year"></span> rkoide.dev</p>
         </footer>
     </body>
 </html>
