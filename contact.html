@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - rkoide.dev</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav aria-label="Navigation">
+            <ol itemscope itemtype="https://schema.org/BreadcrumbList" style="list-style: none; padding: 0; display: flex; gap: 0.5em;">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="/">
+                        <span itemprop="name">rkoide. dev</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </li>
+            </ol>
+        </nav>
+    </header>
+    
+    <main>
+        <h1 class="underlineDotted">Contact</h1>
+        
+        <section>
+            <p>If you have any inquiries, please click the button below to access the Google Form. I will respond within a week. </p>
+            
+            <p class="form-button-container">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeJtKOnvRKwptqoD6vdP_IpkB-o-qPYZ2V7qhsDg8Z40Am7vQ/viewform?usp=header" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="button">
+                    📝 Open Contact Form
+                </a>
+            </p>
+            
+            <p><small>* The form will open in a new tab</small></p>
+        </section>
+        
+        <section>
+            <h2>Before Contacting</h2>
+            <ul>
+                <li><strong>Response time:</strong> I usually respond within a week</li>
+                <li><strong>File attachments:</strong> You can attach screenshots or documents</li>
+                <li><strong>Privacy:</strong> Your personal information will only be used to respond to your inquiry</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Other Contact Methods</h2>
+            <ul>
+                <li><strong>Social Media:</strong> You can also reach me via <a href="/links/">my social accounts</a></li>
+                <!-- <li><strong>Urgent matters:</strong> Please use LinkedIn messaging</li> -->
+            </ul>
+        </section>
+        
+        <section>
+            <h2>FAQ</h2>
+            <dl>
+                <dt><strong>Q: How long does it take to get a response?</strong></dt>
+                <dd>A: I usually respond within a week. If urgent, please mention it in your message.</dd>
+                
+                <dt><strong>Q:  Do you accept work requests?</strong></dt>
+                <dd>A: Currently, I am employed full-time and not accepting freelance projects.</dd>
+                
+                <dt><strong>Q: Can I ask technical questions?</strong></dt>
+                <dd>A: Yes, feel free to ask. However, I may not be able to answer questions outside my expertise.</dd>
+            </dl>
+        </section>
+        
+        <p><a href="/">Back to Home</a></p>
+    </main>
+
+    <footer>
+        <p><a href="/ja/contact.html">🌐 日本語</a></p>
+        <p>&copy; <span id="copyright-year"></span> rkoide</p>
+    </footer>
+    
+    <script>
+        const startYear = 2025;
+        const currentYear = new Date().getFullYear();
+        const yearText = startYear === currentYear ? startYear :  `${startYear}-${currentYear}`;
+        document.getElementById('copyright-year').textContent = yearText;
+    </script>
+</body>
+</html>
