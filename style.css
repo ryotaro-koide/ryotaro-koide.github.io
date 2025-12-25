@@ -256,3 +256,38 @@ article > footer {
       gap: 0.5rem;
   }
 }
+
+/* ===== Custom Cursor ===== */
+
+/* Normal */
+body {
+  cursor: url('/images/cursor_oldmouse95_superbaldero.cur'), auto;
+  /* cursor: url('/images/cursor_big_white_viktor88.cur'), auto; */
+}
+
+[data-theme="dark"] body {
+  cursor: url('/images/cursor_oldgrayarrow_cs.cur'), auto;
+  /* cursor: url('/images/cursor_big_white_viktor88.cur'), auto; */
+}
+
+/* When Hover */
+a, button, .button {
+  /* cursor: url('/images/cursor-pointer.png'), pointer; */
+  /* cursor: url('/images/cursor_xp.cur'), pointer; */
+  cursor: pointer;
+}
+
+[data-theme="dark"] a,
+[data-theme="dark"] button,
+[data-theme="dark"] .button {
+  cursor: url('/images/cursor_negativehand_cs.cur'), pointer;
+  /* cursor: url('/images/cursor_xp.cur'), pointer; */
+  /* cursor: pointer; */
+}
+
+/* When Text Selection */
+/* input, textarea, [contenteditable] { */
+  /* cursor: url('/images/cursor-text.png'), text; */
+  /* cursor: url('/images/cursor_xp.cur'), pointer; */
+  /* cursor: pointer;
+} */
